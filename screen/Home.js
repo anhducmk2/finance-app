@@ -1,14 +1,32 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, TouchableOpacity, Image } from "react-native";
 import React from "react";
+import { StatusBar } from "expo-status-bar";
 
-const Home = () => {
+export default Home = () => {
   return (
-    <View>
+    <View style={styles.container}>
+      <StatusBar style="dark" />
       <Text>Home</Text>
+      <View style={styles.icon}>
+        <Image style={styles.image} source={"../storages/icon/history.png"} />
+      </View>
     </View>
   );
 };
 
-export default Home;
-
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  icon: {
+    width: 430,
+    height: 500,
+    top: 50,
+  },
+  image: {
+    width: 50,
+    height: 50,
+    top: 100,
+    left: 50,
+  },
+});
